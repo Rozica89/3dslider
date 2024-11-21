@@ -1,0 +1,146 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');  
+
+body{
+    display:block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(165, 165, 17);
+}
+.banner{
+    width:100%;
+    height:100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+.banner .slider{
+    position: absolute;
+    width: 200px;
+    height: 250px;
+    top:10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 40s linear infinite;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.item {
+    position: absolute;
+    width: 200px; /* 10 cm converted to pixels (assuming 96dpi) */
+    height: 300px; /* 6 cm converted to pixels */
+    padding-top: 30%;
+    padding-bottom: 10%;
+    top: 70%;
+    left: 45%;
+    transform-origin: center -50px; /* Distance from the center */
+    transform: 
+        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(450px); /* Adjusted distance for new card size */
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px; /* Optional, for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional, for card-like appearance */
+    background: #fff; /* Optional, for a "card frame" effect */
+}
+.content{
+    position:relative;
+    top: 10%;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    width: min(1400px, 100vw);
+    height: max-content;
+
+    justify-content: space-between;
+    align-items: center;
+}
+.content h2{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 70px;
+    line-height: 1em;
+    color: rgb(2, 2, 93);
+    top: 0;
+}
+.article{
+    display: flex;
+    left: 10%;
+    right: 10%;
+    padding: 20%;
+    padding-top: 0%;
+    padding-bottom: 5%;
+    margin-top:0%;
+}
+.article-text{
+    padding: 20%;
+    margin-top:-25%;
+    padding-bottom: 10%;
+}
+/* testimonials */
+
+.testimonials{
+    padding: 40px 0;
+    background: rgb(240, 228, 163);
+    color: rgb(85, 65, 4);
+    text-align: center;
+}
+.inner{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.row{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.col{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.testimonial{
+    background-color: rgb(241, 245, 170);
+    padding: 30px;
+    margin-bottom: 10%;
+}
+
+.testimonial img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.name{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+.stars{
+    color: rgb(137, 103, 30);
+    
+}
+
+
+
+
+
+
+
+
+
+
